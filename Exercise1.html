@@ -3,9 +3,49 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Button Click Counter</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+      padding: 50px;
+    }
+
+    button {
+      padding: 12px;
+      font-size: 18px;
+      background-color: #4caf50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin: 20px;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    p {
+      font-size: 20px;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
-  
+  <h1>Button Click Counter</h1>
+  <button id="clickButton">Click Me</button>
+  <p id="clickCounter">You have clicked 0 times</p>
+
+  <script>
+    let clickCount = 0;
+    const button = document.getElementById('clickButton');
+    const counterDisplay = document.getElementById('clickCounter');
+
+    button.addEventListener('click', () => {
+      clickCount++;
+      counterDisplay.textContent = `You have clicked ${clickCount} times`
+    })
+  </script>
 </body>
 </html>
