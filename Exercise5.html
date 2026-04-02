@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Keyboard Tracker</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+      padding: 50px;
+    }
+
+    .key-display {
+      font-size: 32px;
+      font-weight: bold;
+      padding: 40px;
+      background-color: #f0f0f0;
+      border-radius: 10px;
+      margin: 30px auto;
+      max-width: 500px;
+      border: 3px solid #2196f3;
+    }
+
+    .instruction {
+      color: #666;
+      font-size: 14px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+    <h1>Keyboard Tracker</h1>
+    <div class="key-display" id="keyDisplay">
+      Last Key pressed: None
+    </div>
+    <p class="instruction">Click anywhere on the page and press any key on your keyboard</p>
+
+     <script>
+        const keyDisplay = document.getElementById('keyDisplay');
+        
+        document.addEventListener('keydown', (event) => {
+            const keyPressed = event.key;
+            keyDisplay.textContent = `Last key pressed: ${keyPressed}`;
+        });
+    </script>
+</body>
+</html>
