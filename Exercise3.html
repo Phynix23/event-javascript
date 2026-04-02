@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Colour Changer</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+      padding: 50px;
+      transition: background-color 0.3s ease;
+    }
+
+    button {
+      padding: 15px 30p;
+      font-size: 18px;
+      margin: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      color: white;
+      font-weight: bold;
+    }
+
+    button:hover {
+      opacity: 0.8;
+      transform: scale(1.05);
+    }
+
+    #redBtn {
+      background-color: red;
+    }
+
+    #greenBtn {
+      background-color: green;
+    }
+
+    #blueBtn {
+      background-color: blue;
+    }
+
+    #whiteBtn {
+      background-color: black;
+    }
+  </style>
+</head>
+<body>
+    <h1>Colour Changer</h1>
+    <button id="redBtn">Red</button>
+    <button id="greenBtn">Green</button>
+    <button id="blueBtn">Blue</button>
+    <button id="whiteBtn">White</button>
+
+    <script>
+      const redButton = document.getElementById('redBtn');
+      const greenButton = document.getElementById('greenBtn');
+      const blueButton = document.getElementById('blueBtn');
+      const whiteButton = document.getElementById('whiteBtn');
+
+      redButton.addEventListener('click', () => {
+        document.body.style.backgroundColor = 'red';
+      });
+      greenButton.addEventListener('click', () => {
+        document.body.style.backgroundColor = 'green';
+      });
+      blueButton.addEventListener('click', () => {
+        document.body.style.backgroundColor = 'blue';
+      });
+      whiteButton.addEventListener('click', () => {
+        document.body.style.backgroundColor = 'white';
+      });
+    </script>
+</body>
+</html>
